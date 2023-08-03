@@ -1,12 +1,17 @@
 'use client'
 
-export default function RemoveButton(props:any) {
+export default function RemoveButton({props, children, visible, style}: any) {
   
   function removeTask() {
-    props.visible(false)
+    if(typeof visible == "boolean") {
+      visible = false
+      console.log(visible)
+    }
+    else
+      visible(false)
   }
 
   return (
-    <button className='text-red-500 font-bold' onClick={()=>{removeTask()}}>X</button>
+    <button className={style} onClick={()=>{removeTask()}}>{children}</button>
   )
 }
