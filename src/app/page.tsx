@@ -1,5 +1,6 @@
 'use client'
 
+import AddTaskButton from "@/components/AddTaskButton";
 import RemoveButton from "@/components/RemoveButton";
 import Task from "@/components/Task";
 import { useState } from "react";
@@ -14,9 +15,7 @@ export default function Home() {
           TO DO MANAGER
         </h1>
         <section className="flex gap-2">
-          <button className='bg-green-500 text-md rounded-md py-1 px-2 font-bold text-white hover:bg-green-600 shadow-md'>
-            Add Task
-          </button>
+          <AddTaskButton/>
           <RemoveButton style='bg-red-500 text-md rounded-md py-1 px-2 font-bold text-white hover:bg-red-600 shadow-md' visible={setShowTasks}>
             Remove ALL Tasks
           </RemoveButton>
