@@ -21,7 +21,7 @@ export default function Home() {
     priority:'high'
   }
   
-  const [taskList, setTaskList] = useState<Array<Task | null>>([task1])
+  const [taskList, setTaskList] = useState<Array<Task | null>>([task1, task1, task1])
   
   const addTask = (task:Task) => {
     setTaskList([...taskList, task])
@@ -42,7 +42,7 @@ export default function Home() {
             Remove ALL Tasks
           </RemoveButton>
         </section>
-        <section id='taskList' className='flex flex-col bg-slate-300 rounded-md border-black border-2 overflow-hidden min-h-[10rem] gap-2 h-max w-9/12 m-2'>
+        <section id='taskList' className='flex flex-col bg-indigo-100 shadow-lg overflow-hidden min-h-[10rem] gap-1 h-max w-9/12 m-2'>
           {taskList && taskList.map((task, index)=>(
             <Task task={task} key={index}/>
           ))}
