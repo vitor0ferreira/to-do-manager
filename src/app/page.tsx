@@ -3,6 +3,7 @@
 import AddTaskButton from "@/components/AddTaskButton";
 import RemoveButton from "@/components/RemoveButton";
 import Task from "@/components/Task";
+import CreateTaskModal from "@/modal/CreateTaskModal";
 import { useState } from "react";
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
   }
   
   const [taskList, setTaskList] = useState<Array<Task | null>>([task1, task1, task1])
+  const [showModal, setShowModal] = useState<boolean>(true)
   
   const addTask = (task:Task) => {
     setTaskList([...taskList, task])
@@ -37,7 +39,7 @@ export default function Home() {
           TO DO MANAGER
         </h1>
         <section className="flex gap-2">
-          <AddTaskButton/>
+          <AddTaskButton handleModal={()=>setShowModal(!showModal)} />
           <RemoveButton style='bg-red-500 text-md rounded-md py-1 px-2 font-bold text-white hover:bg-red-600 shadow-md' remove={removeAllTasks}>
             Remove ALL Tasks
           </RemoveButton>
@@ -47,6 +49,7 @@ export default function Home() {
             <Task task={task} key={index}/>
           ))}
         </section>
+        <CreateTaskModal/>
     </main>
   )
 }

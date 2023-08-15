@@ -1,13 +1,11 @@
 'use client'
-import React, {Fragment, useState} from 'react'
-
+import React, {useState} from 'react'
 
 export default function CreateTaskModal () {
-  const [showModal, setShowModal] = useState<boolean>(false)
 
   return (
-    <>
-      {showModal && (<div className='bg-black/30 min-h-screen min-w-screen' onClick={()=>{setShowModal(false)}}/>)}
-    </>
+    <div className='absolute top-0 left-0' >
+      <div className='bg-black h-screen w-full min-w-[800px] min-h-screen flex'>a</div>
+    </div>
   )
 }

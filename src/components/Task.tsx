@@ -4,7 +4,7 @@ import RemoveButton from "./RemoveButton";
 import React, { useState } from 'react'
 import {FaDeleteLeft} from 'react-icons/fa6'
 
-export default function Task({props, task, key}:any) {
+export default function Task({props, task}:any) {
 
   interface PriorityColors {
     text: string
