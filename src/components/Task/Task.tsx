@@ -1,8 +1,8 @@
 'use client'
 
-import RemoveButton from "./RemoveButton";
 import React, { useState } from 'react'
 import {FaDeleteLeft} from 'react-icons/fa6'
+import RemoveTaskButton from './RemoveTaskButton'
 
 export default function Task({props, task}:any) {
 
@@ -40,9 +40,9 @@ export default function Task({props, task}:any) {
             <span className='font-bold '>{task.title}</span>
             <span className='font-bold '>{task.date.toDateString()}</span>
             <span className={`${priorityColor.text} font-bold drop-shadow-lg`}>{task.priority.toUpperCase()}</span>
-            <RemoveButton remove={removeTask} style='text-red-500'>
+            <RemoveTaskButton remove={removeTask} style='text-red-500'>
               <FaDeleteLeft/>
-            </RemoveButton>
+            </RemoveTaskButton>
           </article>
         )}
       </>
