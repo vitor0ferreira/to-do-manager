@@ -1,5 +1,6 @@
 
 import RemoveButton from "@/components/RemoveButton";
+import TaskForm from "@/components/TaskForm/TaskForm";
 import TaskSection from "@/components/TaskSection";
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
         <h1 className='block font-extrabold text-4xl'>
           TO DO MANAGER
         </h1>
+        <TaskForm/>
         <section className="flex gap-2">
           <RemoveButton/>
         </section>
