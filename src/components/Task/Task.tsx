@@ -38,7 +38,7 @@ export default function Task({props, task}:any) {
           <article className='border-white grid gap-4 grid-cols-5 border-b-4'>
             <div className={`${priorityColor.bg} w-6 aspect-square`}/>
             <span className='font-bold '>{task.title}</span>
-            <span className='font-bold '>{task.date.toDateString()}</span>
+            <span className='font-bold '>{task.date}</span>
             <span className={`${priorityColor.text} font-bold drop-shadow-lg`}>{task.priority.toUpperCase()}</span>
             <RemoveTaskButton remove={removeTask} style='text-red-500'>
               <FaDeleteLeft/>

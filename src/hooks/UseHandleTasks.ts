@@ -1,19 +1,19 @@
 'use client'
 import { useState } from "react"
 
+
+export interface Task {
+  title:string,
+  date:string,
+  priority:string
+}
+
+
 export function UseHandleTasks(){
-
-  type Priority = 'high' | 'medium' | 'low'
-
-  interface Task {
-    title:string,
-    date:Date,
-    priority:Priority
-  }
-
+  
   let task1:Task = {
     title:'Cozinhar',
-    date: new Date('01-01-23'),
+    date: '20-03-2020',
     priority:'high'
   }
 
