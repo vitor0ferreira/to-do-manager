@@ -1,7 +1,7 @@
 
 import {FaDeleteLeft} from 'react-icons/fa6'
 
-export default function TaskCard({props, task, remove}:any) {
+export default function TaskCard({props, task, removeTask}:any) {
 
   interface PriorityColors {
     text: string
@@ -33,7 +33,7 @@ export default function TaskCard({props, task, remove}:any) {
       <span className={`${priorityColor.text} font-bold drop-shadow-lg`}>
         Prioridade
       </span>
-      <button className="text-red-500 bg-slate-400 p-2" onClick={()=>remove(task.id)}>
+      <button className="text-red-500 bg-slate-400 p-2" onClick={()=>removeTask(task.id)}>
         <FaDeleteLeft />
       </button>
     </article>
